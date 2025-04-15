@@ -163,7 +163,7 @@ nav ul li img{
 
 .about {
     width: 90%;
-    height: 100vh;
+    height: auto;
     background-color: transparent;
     transform-style: preserve-3d;
     position: relative;
