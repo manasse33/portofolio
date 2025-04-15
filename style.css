@@ -89,7 +89,7 @@ nav ul li img{
   }
   
 
-  /* .burger.open span:nth-child(1) {
+  .burger.open span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
   
@@ -100,7 +100,7 @@ nav ul li img{
   .burger.open span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
   }
-   */
+  
   
 
 .me {
@@ -169,7 +169,7 @@ nav ul li img{
     position: relative;
     margin: 0 auto;
     z-index: 2;
-    padding: 80px 0;
+    /* padding: 10px 0; */
     cursor: pointer;
     transition: 2s;
 }
@@ -201,6 +201,7 @@ nav ul li img{
 .about-grid-back{
   
    transform: rotateY(180deg);
+   /* transform: translateY(-10); */
 }
 .about-grid-back .about-grid-item{
     background-color: #f4c2c2;
@@ -211,7 +212,14 @@ nav ul li img{
     padding: 0;
     transform: rotateY(180deg);
 }
-
+.about.flip button{
+    /* position: absolute; */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+   /* right: 0; */
+   /* top: 5%; */
+}
 .about-grid-item:hover{
     transform: scale(1.1);
     transition: 1.2s;
@@ -225,7 +233,7 @@ nav ul li img{
     height: 50px;
     border-radius: 50%;
    right: 0;
-   top: 35%;
+   /* top: 35%; */
 }
 
 .about button img{
@@ -236,7 +244,7 @@ nav ul li img{
 .experience {
     width: 90%;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -293,7 +301,7 @@ hr {
     text-align: center;
     color: #fff;
     font-size: 1.8em; /* Assure une belle taille pour le titre */
-    margin-bottom: 20px;
+    padding-top: 50px;
 }
 
 /* Sur le survol de chaque élément */
@@ -415,44 +423,49 @@ hr {
 }
 
 
-
-
 .contact-form .container {
     max-width: 100%;
     margin: 0 auto;
+    padding: 20px; /* Ajout d'un peu de padding pour espacer les bords */
 }
 
+/* Titre du formulaire */
 .contact-form h3 {
     color: #FFB300;
     text-align: center;
     font-weight: bold;
     margin-bottom: 20px;
+    font-size: 1.8rem; /* Taille de police légèrement augmentée */
 }
 
+/* Texte descriptif */
 .contact-form p {
     margin-bottom: 40px;
     line-height: 1.6;
+    text-align: center; /* Centrage du texte descriptif */
+    font-size: 1.1rem;
 }
 
 .contact-form form {
     display: grid;
-    grid-template-columns:  repeat(2,1fr) !important;
-    align-items: center;
- 
+    grid-template-columns: repeat(1, 1fr); /* Par défaut une colonne pour les petits écrans */
+    gap: 20px; /* Ajout de l'espacement entre les champs */
+    justify-items: center; /* Centrage des éléments du formulaire */
+    padding: 20px;
 }
 
-.contact-form .right{
-   margin-right: 0;
+/* Section droite du formulaire (optionnel) */
+.contact-form .right {
+    margin-right: 0;
     max-width: 500px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0 10px; /* Padding gauche et droite */
     margin: auto;
     border-radius: 6px;
-    
+    display: flex;
+    flex-direction: column;
 }
 
-
-
+/* Inputs et textareas */
 .contact-form input,
 .contact-form textarea {
     background-color: transparent;
@@ -460,23 +473,25 @@ hr {
     padding: 12px;
     border: 1px solid #1a237e;
     border-radius: 6px;
-    color: var(--black);
+    color: #1a237e;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
+    font-size: 1rem;
 }
-
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #1a237e;
+    border-color: #FFB300;
     outline: none;
 }
 
+/* Placeholder */
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
     font-style: italic;
     color: #bdc3c7;
 }
 
+/* Bouton d'envoi */
 .contact-form button {
     background-color: #FFB300;
     color: #1a237e;
@@ -487,19 +502,29 @@ hr {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px; /* Ajout d'un espace en haut du bouton */
 }
 
-.contact-form .bouton {
- text-align: center;
-}
-
+/* Effet au survol */
 .contact-form button:hover {
-    background-color: var(--primary-blue);
+    background-color: #1a237e;
+    color: #fff;
 }
 
+/* Effet au clic sur le bouton */
 .contact-form button:active {
     transform: translateY(2px);
 }
+
+
+
+
+
+
 
 
 .footer {
@@ -507,7 +532,7 @@ hr {
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-    background-color: #1a237e;
+    /* background-color: #1a237e; */
     color: #fff;
     flex-wrap: wrap; /* Permet d'aligner les éléments sur plusieurs lignes sur les petits écrans */
     gap: 30px;
@@ -655,6 +680,8 @@ body.light-mode .footer p{
 }
 
 
+
+
 /* Adaptation pas fini */
 
 @media (max-width: 768px) {
@@ -666,6 +693,12 @@ body.light-mode .footer p{
       gap: 20px;
       padding: 10px;
       position: static; /* important pour mobile */
+      
+    }
+
+    .about-grid-back{
+        position: absolute;
+        top: 70px;
     }
   
     .about-grid-item {
@@ -679,7 +712,8 @@ body.light-mode .footer p{
   
     .about {
       height: auto; /* pas de height fixe sur mobile */
-      padding-bottom: 60px;
+      
+      margin-top: 0;
     }
   }
   
@@ -695,7 +729,7 @@ body.light-mode .footer p{
       top: 0px;
       right: 0;
       background: #fff;
-      width: 50%;
+      width: 70%;
       transform: translateY(-100%);
       transition: 0.3s ease;
       opacity: 0;
@@ -713,6 +747,7 @@ body.light-mode .footer p{
     nav ul {
         flex-direction: column;
         align-items: center;
+        text-align: start;
         gap: 20px;
         padding: 20px 0;
       }
@@ -776,6 +811,7 @@ body.light-mode .footer p{
 @media (max-width: 768px) {
     .projet h1 {
         font-size: 2.5em;
+               align-content: center;
     }
 
     .projet .slider button {
@@ -793,6 +829,7 @@ body.light-mode .footer p{
 @media (max-width: 480px) {
     .projet h1 {
         font-size: 2em;
+        align-content: center;
     }
 
     .projet .slider button {
@@ -840,9 +877,10 @@ body.light-mode .footer p{
 
 @media (max-width: 768px) {
     .footer {
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: center; /* Centre les éléments sur les petits écrans */
         padding: 20px;
+        text-align: center;
     }
 
     .footer div {

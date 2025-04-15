@@ -111,26 +111,52 @@ burger.addEventListener("click", () => {
   nav.classList.toggle("show");
 });
 
-// const links = document.querySelectorAll("nav ul li a");
+const links = document.querySelectorAll("nav ul li a");
 
-// links.forEach(link => {
-//   link.addEventListener("click", () => {
-//     nav.classList.remove("show");
-//     burger.classList.remove("open");
-//   });
-// });
-
-
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("show");
+    burger.classList.remove("open");
+  });
+});
 
 
-// const btn = document.querySelector('.move');
 
 
-// console.log(btn);
-// btn.addEventListener('click',function(){
-//    console.log(btn);
+
+function autoScroll() {
+ 
+   
+   let scrollContainer = document.getElementById("slider");
+ 
+   if (scrollContainer.scrollLeft + scrollContainer.offsetWidth >= scrollContainer.scrollWidth) {
   
-// })
+      scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      scrollContainer.scrollBy({ left: scrollContainer.offsetWidth, behavior: 'smooth' });
+    }
+ 
+}
+
+setInterval(autoScroll, 3000);
+
+
+
+
+function autoScrolle() {
+  
+   let back = document.getElementById("slider-back");
+   
+      if (back.scrollLeft + back.offsetWidth >= back.scrollWidth) {
+         back.scrollTo({ left: 0, behavior: 'smooth' });
+       } else {
+         back.scrollBy({ left: back.offsetWidth, behavior: 'smooth' });
+       }
+   
+ }
+ 
+ setInterval(autoScrolle, 4000);
+
 
 
 
