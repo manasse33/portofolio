@@ -211,12 +211,14 @@ nav ul li img{
   padding: 0;
   transform: rotateY(180deg);
 }
-/* .about.flip button{
+.about.flip button{
+  /* position: absolute; */
   width: 50px;
   height: 50px;
   border-radius: 50%;
-
-} */
+ /* right: 0; */
+ /* top: 5%; */
+}
 .about-grid-item:hover{
   transform: scale(1.1);
   transition: 1.2s;
@@ -225,10 +227,12 @@ nav ul li img{
 }
 
 .about  button{
+  /* position: absolute; */
   width: 50px;
   height: 50px;
   border-radius: 50%;
  right: 0;
+ /* top: 35%; */
 }
 
 .about button img{
@@ -512,7 +516,7 @@ padding: 0;
   padding: 30px;
   border-radius: 10px;
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
   box-shadow: 0 0 5px #2ecc71;
   transition: transform 0.3s ease;
 }
