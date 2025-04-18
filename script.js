@@ -51,51 +51,12 @@ thema.addEventListener('click',()=>{
  
 })
 
-// images
-
-let currentIndex =0;
-
-document.addEventListener(
-   "DOMContentLoaded", () =>{
-      const tolalImages = document.querySelectorAll('.imgs');
-      const total = tolalImages.length;
-      document.querySelector('.nbr').textContent = total/total;
-   }
-    
-)
 
 
-function next(){
-  
-   const tolalImages = document.querySelectorAll('.imgs');
-   const total = tolalImages.length;
-   const sliderwidth = document.querySelector('.slider');
-   const large = sliderwidth.getBoundingClientRect();
-   // console.log(currentIndex);
-   if (currentIndex < total-1) {
-      // console.log(currentIndex);
-      currentIndex++;
-      document.querySelector('.slider-content').scrollLeft += large.width;
-      document.querySelector('.nbr').textContent = currentIndex+1;
-   }
+
    
    
-//  let now = total -currentIndex;
-}
 
-function previous(){
-   const tolalImages = document.querySelectorAll('.imgs');
-   const total = tolalImages.length;
-   const sliderwidth = document.querySelector('.slider');
-   const large = sliderwidth.getBoundingClientRect();
-   if (currentIndex>=1) {
-      currentIndex--;
-      document.querySelector('.slider-content').scrollLeft -= large.width;
-      document.querySelector('.nbr').textContent = currentIndex+1;
-   }
-  
-   
-}
 
 function swip(){
    const card = document.querySelector('.about');
@@ -158,6 +119,22 @@ function autoScrolle() {
  setInterval(autoScrolle, 4000);
 
 
+ const experienceItems = document.querySelectorAll('.experience-item');
+
+function revealExperienceItems() {
+  const windowHeight = window.innerHeight;
+  experienceItems.forEach(item => {
+    const elementTop = item.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      item.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealExperienceItems);
+window.addEventListener('load', revealExperienceItems); // pour affichage direct si déjà visible
+
+
 
 
 
@@ -165,4 +142,17 @@ function autoScrolle() {
 
 
 
+function autoScroller() {
+  
+   let back = document.querySelector(".container-projet");
+   
+      if (back.scrollLeft + back.offsetWidth >= back.scrollWidth) {
+         back.scrollTo({ left: 0, behavior: 'smooth' });
+       } else {
+         back.scrollBy({ left: back.offsetWidth, behavior: 'smooth' });
+       }
+   
+ }
+ 
+ setInterval(autoScroller, 4000);
 
