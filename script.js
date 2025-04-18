@@ -62,8 +62,8 @@ function swip(){
    const card = document.querySelector('.about');
    console.log(card);
    card.classList.toggle('flip');
-   // console.log(1);
 }
+
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
 
