@@ -3,304 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
     <header>
-      
-        
-        <nav id="nav">
-            <ul>
-                <li> <a href="#Competences">Moi</a></li>
-                <li> <a href="#formation">Compétences</a></li>
-                <li> <a href="#Projet">Projets</a></li>
-                <li><button id="theme-toggle"><img src="images/dark-mode-svgrepo-com.svg" alt="" loading="lazy"></button></li>
-                <li><button id="theme2" class="none"><img src="images/dark-svgrepo-com.svg" alt="" loading="lazy"></button></li>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
-        <div class="burger" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </header>
-    <section class="me" data-aos="fade-up" data-aos-duration="1000">
-        <div>
-            <!-- <p>I am</p> -->
-            <h3>FullStack Developer</h3>
-            <!-- <p>Lorem ipsum dolor sit amet.</p> -->
-                <h1 data-aos="fade-left" data-aos-delay="400">Manassé Eliezer AFOULA OLLOULHA</h1>
-               
-                
-               
-            <div class="link" data-aos="fade-up" data-aos-delay="600">
-                <a href="cv/cv.pdf" download="MabasséAFOULA">Telechargez Mon CV</a>
-                <!-- <a href="">Manassé en vvideo</a> -->
-                <a href="https://github.com/manasse33lin">Linkedin</a>
-                <a href="">Github</a>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle">Bonjour, je suis Manassé Eliezer AFOULA OLLOULHA</p>
+            <h1 class="hero-title">Développeur Web</h1>
+            <p class="hero-description">
+                Passionné par la création d'expériences web exceptionnelles, 
+                je transforme vos idées en solutions digitales innovantes et performantes.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
             </div>
         </div>
-        <div>
-            <img src="images/14.webp" alt="" data-aos="zoom-in" data-aos-delay="200">
+        <div class="hero-image">
+            <img src="images/IMG-20250523-WA0096.jpg" alt="Photo de Manassé Eliezer AFOULA OLLOULHA">
         </div>
-     
+    </section>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">À propos de moi</h2>
+        <div class="about-grid">
+            <div class="about-card fade-in-up">
+                <div class="icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Développement Web</h3>
+                <p>Expert en développement front-end et back-end, je crée des applications web modernes et responsives en utilisant les dernières technologies.</p>
+            </div>
+            <div class="about-card fade-in-up">
+                <div class="icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Design UI/UX</h3>
+                <p>Je conçois des interfaces utilisateur intuitives et attrayantes, en me concentrant sur l'expérience utilisateur pour créer des produits engageants.</p>
+            </div>
+            <div class="about-card fade-in-up">
+                <div class="icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Applications Mobiles</h3>
+                <p>Développement d'applications mobiles cross-platform avec des technologies modernes pour une expérience utilisateur optimale.</p>
+            </div>
+        </div>
     </section>
 
-    <h1 class="text-center">A Propos de moi</h1>
-
-    <section class="about"  id="Competences">
-      <button  onclick="swip()"><img src="images/arrow-circle-detour-svgrepo-com.svg" loading="lazy" alt=""></button>
-      <div class="about-grid about-grid-front"   data-aos="fade-up" data-aos-duration="1000" id="slider">
-            <div class="about-grid-item" data-aos="zoom-in" data-aos-delay="200">
-                <h2>Dynamique</h2>
-                <p>Capable de m'adapter rapidement aux situations, je suis toujours prêt à relever de nouveaux défis avec énergie et enthousiasme.</p>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Mes Compétences</h2>
+        <div class="skills-container">
+            <div class="skill-category fade-in-up">
+                <h3>Front-End</h3>
+                <div class="skill-item">
+                    <h4>HTML5 & CSS3</h4>
+                    <p>Maîtrise complète des standards web modernes</p>
+                </div>
+                <div class="skill-item">
+                    <h4>JavaScript</h4>
+                    <p>Développement d'applications interactives</p>
+                </div>
+                <div class="skill-item">
+                    <h4>React</h4>
+                    <p>Frameworks JavaScript pour des interfaces dynamiques</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Tailwind CSS</h4>
+                    <p>Préprocesseurs et frameworks CSS</p>
+                </div>
             </div>
-            <div class="about-grid-item" data-aos="zoom-in" data-aos-delay="400">
-                <h2>Curieux</h2>
-                <p>J'ai une soif constante d'apprendre. J'aime explorer de nouvelles technologies et approfondir mes compétences jour après jour.</p>
+            <div class="skill-category fade-in-up">
+                <h3>Back-End</h3>
+                <div class="skill-item">
+                    <h4>Node.js & Express</h4>
+                    <p>Développement d'APIs REST et GraphQL</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Php,Codeiginter,Laravel</h4>
+                    <p>Applications web robustes et scalables</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Bases de données</h4>
+                    <p>MySQL, MongoDB</p>
+                </div>
+                <!-- <div class="skill-item">
+                    <h4>Cloud & DevOps</h4>
+                    <p>AWS, Docker, CI/CD</p>
+                </div> -->
             </div>
-            <div class="about-grid-item" data-aos="zoom-in" data-aos-delay="600">
-                <h2>Passionné</h2>
-                <p>Le développement web est plus qu'un métier pour moi : c'est une véritable passion qui me pousse à toujours donner le meilleur de moi-même.</p>
-            </div>
-            <div class="about-grid-item"data-aos="zoom-in" data-aos-delay="800">
-                <h2>Créatif</h2>
-                <p>Je conçois des interfaces originales et intuitives, en mêlant esthétique et fonctionnalité pour offrir des expériences uniques.</p>
-            </div>
-            <div class="about-grid-item" data-aos="zoom-in" data-aos-delay="1000">
-                <h2>Organisé</h2>
-                <p>Je planifie rigoureusement mes projets afin de respecter les délais, tout en assurant une qualité optimale à chaque étape.</p>
-            </div>
-            <div class="about-grid-item" data-aos="zoom-in" data-aos-delay="1200">
-                <h2>Esprit d'équipe</h2>
-                <p> J'apprécie le travail en équipe, où l'échange d'idées et la collaboration permettent d'aller plus loin ensemble.</p>
+            <div class="skill-category fade-in-up">
+                <h3>Outils & Design</h3>
+                <div class="skill-item">
+                    <h4>Git & GitHub</h4>
+                    <p>Contrôle de version et collaboration</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Canva</h4>
+                    <p>Design d'interfaces et prototypage</p>
+                </div>
+                <!-- <div class="skill-item">
+                    <h4>Webpack & Vite</h4>
+                    <p>Outils de build et optimisation</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Testing</h4>
+                    <p>Jest, Cypress, Testing Library</p>
+                </div> -->
             </div>
         </div>
-
-      <div class="about-grid about-grid-back" id="slider-back">
-          <div class="about-grid-item">
-                <h2>Dynamique</h2>
-                <p>Capable de m'adapter rapidement aux situations, je suis toujours prêt à relever de nouveaux défis avec énergie et enthousiasme.</p>
-            </div>
-            <div class="about-grid-item">
-                <h2>Curieux</h2>
-                <p>J'ai une soif constante d'apprendre. J'aime explorer de nouvelles technologies et approfondir mes compétences jour après jour.</p>
-            </div>
-            <div class="about-grid-item">
-                <h2>Passionné</h2>
-                <p>Le développement web est plus qu'un métier pour moi : c'est une véritable passion qui me pousse à toujours donner le meilleur de moi-même.</p>
-            </div>
-            <div class="about-grid-item">
-                <h2>Créatif</h2>
-                <p>Je conçois des interfaces originales et intuitives, en mêlant esthétique et fonctionnalité pour offrir des expériences uniques.</p>
-            </div>
-            <div class="about-grid-item">
-                <h2>Organisé</h2>
-                <p>Je planifie rigoureusement mes projets afin de respecter les délais, tout en assurant une qualité optimale à chaque étape.</p>
-            </div>
-            <div class="about-grid-item">
-                <h2>Esprit d'équipe</h2>
-                <p> J'apprécie le travail en équipe, où l'échange d'idées et la collaboration permettent d'aller plus loin ensemble.</p>
-            </div>
-    
-      </div>
     </section>
 
-    <h1 class="text-center">Competences</h1>
-
-    <section class="experience" id="formation">
-   
-        <div class="experience1">
-            <hr data-aos="fade-down" data-aos-delay="100">
-            <div class="experience-item" data-aos="zoom-in" data-aos-delay="200">
-                <h1>Frontend</h1>
-                <div>
-                    <h2>HTML</h2>
-                    <p>Langage de base pour structurer le contenu des pages web. Je l’utilise quotidiennement pour créer des interfaces claires et accessibles.</p>
-                </div>
-                <div>
-                    <h2>CSS</h2>
-                    <p>Grâce à CSS, je donne vie aux designs avec des animations modernes, du responsive design, et une attention particulière à l’ergonomie.</p>
-                </div>
-                <div>
-                    <h2>JavaScript</h2>
-                    <p>J’utilise JavaScript pour rendre les pages interactives, créer des effets dynamiques et manipuler le DOM en temps réel.</p>
-                </div>
-            </div>
-            <hr data-aos="fade-down" data-aos-delay="100" >
-            <div class="experience-item" data-aos="zoom-in" data-aos-delay="400">
-                <h1>Backend</h1>
-                <div>
-                    <h2>PHP</h2>
-                    <p>Je développe des fonctionnalités robustes côté serveur en PHP, tout en assurant la sécurité et la performance des applications.</p>
-                </div>
-                <div>
-                    <h2>CodeIgniter</h2>
-                    <p>Un framework léger que j'utilise pour construire des applications rapides avec une architecture MVC claire.</p>
-                </div>
-                <div>
-                    <h2>Laravel</h2>
-                    <p>Mon framework PHP favori pour construire des applications web modernes, sécurisées et maintenables à grande échelle.</p>
-                </div>
-                <div>
-                    <h2>MySQL</h2>
-                    <p>Je conçois des bases de données optimisées, avec des requêtes SQL performantes pour manipuler efficacement les données.</p>
-                </div>
-            </div>
-            <hr data-aos="fade-down" data-aos-delay="100">
-            <div class="experience-item" data-aos="zoom-in" data-aos-delay="600">
-                <h1>Gestion de Version</h1>
-                <div>
-                    <h2>Git</h2>
-                    <p>Indispensable pour la collaboration et le suivi des projets. Je maîtrise les commandes Git pour un workflow fluide.</p>
-                </div>
-                <div>
-                    <h2>GitHub</h2>
-                    <p>J'utilise GitHub pour héberger mes projets, suivre l’évolution du code et collaborer efficacement avec d’autres développeurs.</p>
-                </div>
-            </div>
-        </div>
-
- 
-    </section>
-
-    <h1 class="text-center">Projets Realisés</h1>
-
-    <section class="projet" id="Projet"  data-aos="fade-up">
-        <div class="container-projet">
-      
-          <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Mes Projets</h2>
+        <div class="projects-container">
+            <div class="project-card fade-in-up">
                 <div class="project-image">
-                    <img src="images/14.webp" alt="Projet 1" loading="lazy">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">E-commerce Platform</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">API</span>
                     </div>
-                    <div class="project-details">
-                    <h2 class="project-title">Mortgage Repayment Calculator</h2>
-                    <ul class="project-tech">
-                        <li style="background-color:#00d8ff;">React</li>
-                        <li style="background-color:#007acc;">TypeScript</li>
-                        <li style="background-color:#38bdf8;">TailwindCSS</li>
-                    </ul>
                     <p class="project-description">
-                        Une application qui aide les utilisateurs à calculer le remboursement de leur prêt immobilier selon le montant, le taux et la durée.
+                        Dashboard d'analyse de données avec visualisations interactives, 
+                        graphiques dynamiques et rapports personnalisables.
                     </p>
-                    <a href="#" target="_blank" class="project-link">
-                        <!-- <img src="images/external-link-icon.svg" alt="Voir projet" width="24"> -->
-                        </a>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
-                <div class="project-image">
-                    <img src="images/14.webp" alt="Projet 1" loading="lazy">
-                    </div>
-                    <div class="project-details">
-                    <h2 class="project-title">Mortgage Repayment Calculator</h2>
-                    <ul class="project-tech">
-                        <li style="background-color:#00d8ff;">React</li>
-                        <li style="background-color:#007acc;">TypeScript</li>
-                        <li style="background-color:#38bdf8;">TailwindCSS</li>
-                    </ul>
-                    <p class="project-description">
-                        Une application qui aide les utilisateurs à calculer le remboursement de leur prêt immobilier selon le montant, le taux et la durée.
-                    </p>
-                    <a href="#" target="_blank" class="project-link">
-                        <!-- <img src="images/external-link-icon.svg" alt="Voir projet" width="24"> -->
-                        </a>
-                </div>
-            </div>
-
-
-    <!-- Copie cette carte pour chaque projet -->
-            <div class="project-card" data-aos="zoom-in" data-aos-delay="600">
-                <div class="project-image">
-                    <img src="images/Capture d’écran_7-4-2025_111914_.webp" alt="Projet 2" loading="lazy">
-                </div>
-                <div class="project-details">
-                    <h2 class="project-title">Tutorify - Education Landing Page</h2>
-                    <ul class="project-tech">
-                    <li style="background-color:#e44d26;">HTML</li>
-                    <li style="background-color:#264de4;">CSS</li>
-                    <li style="background-color:#f7df1e; color:#000;">JavaScript</li>
-                    </ul>
-                    <p class="project-description">
-                    Une landing page pour une plateforme d'éducation en ligne, avec un design coloré et engageant.
-                    </p>
-                    <a href="#" target="_blank" class="project-link">
-                    <!-- <img src="images/external-link-icon.svg" alt="Voir projet" width="24"> -->
+                    <a href="#" class="project-link">
+                        Voir le projet <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
-
-  </div>
-</section>
-
-      
-      
-    <!-- <section class="popup" id="pops">
-        <div>
-         
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt deserunt suscipit quaerat provident optio laudantium eaque et. Deserunt, ratione ex!
-        </div>
-    </section> -->
-
-  <section class="contact">
-        <div class="contact1">
-          <div class="contact-item">
-            <h2>Contactez-moi</h2>
-            <p>Email : manasseaoula33@gmail.com</p>
-            <p>Téléphone : +242067571000</p>
-            <p>Adresse : 54, Rue Emergence</p>
-          </div>
-          <div class="contact-item">
-            <h2>Envoyer un message</h2>
-            <form>
-              <input type="text" placeholder="Votre nom" required>
-              <input type="email" placeholder="Votre email" required>
-              <textarea placeholder="Votre message" required></textarea>
-              <button type="submit">Envoyer</button>
-            </form>
-          </div>
-        </div>
-      </section>
-      
-    <!-- <section class="footer">
-        <div>
-            <img src="images/phone-svgrepo-com.svg" alt="">
-            <p>+242067571000</p>
-        </div>
-        <div>
-            <img src="images/email-1-svgrepo-com.svg" alt="">
-            <p>Manasseaoula33@gmail.com</p>
-        </div>
-        <div>
-            <img src="images/location-svgrepo-com.svg" alt="">
-            <p>54,Rue Emergenece</p>
         </div>
     </section>
- -->
 
-  
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contactez-moi</h2>
+        <div class="contact-container">
+            <div class="contact-info fade-in-up">
+                <h3 style="color: var(--primary-color); margin-bottom: 2rem;">Restons en contact</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>manasseafoula33@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h4>Téléphone</h4>
+                        <p>+242 06 757 11 00</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Localisation</h4>
+                        <p>Brazzaville, Congo</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <p>linkedin.com/in/monprofil</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form fade-in-up" id="contactForm">
+                <h3 style="color: var(--primary-color); margin-bottom: 2rem;">Envoyez-moi un message</h3>
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Envoyer le message
+                </button>
+            </form>
+        </div>
+    </section>
 
-  
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#" class="social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-link" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="social-link" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-link" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
 
- 
-
-
-  <script src="script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
